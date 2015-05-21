@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 	end
 
 	def search
-		@users = User.where(name: params[:q])
+		@users = User.where('name LIKE "%'+params[:q]+'%"')
 		render_json(@users)
 	end
 
