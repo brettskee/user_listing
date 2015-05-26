@@ -1,3 +1,52 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+.fixed-user-list {
+	position: fixed !important;
+	height: 100%;
+	overflow: scroll;
+	background-color: #EEE;
+}
+
+.fixed-search {
+	position: fixed;
+}
+
+.content-display-area {
+	position: absolute;
+}
+
+
+
+*/
+
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar-inner {
+    height: 40px;
+}
+
+.scrollable {
+	height:100%;
+    overflow: scroll;
+    position:fixed;
+    margin-top:20px;
+    min-width:100%;
+}
+
+.max-height {
+    height: 100%;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.pad40-top {
+    padding-top: 40px;
+}

@@ -9,56 +9,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-        <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search..." id="user-search">
-          </form>
-          <a class="navbar-brand" href="#">Users</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <%= render partial: "layouts/navbar"  %>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 sidebar">
-        	<h4>All users</h4>
-          <ul class="nav nav-sidebar" id="users-con">
-            <li class="active"><a href="#">All Users <span class="sr-only">(current)</span></a></li>
-          </ul>
-        </div>
-        <div class="col-sm-9 main" id="user-choice">
-          <h1 class="page-header">&nbsp;</h1>
+  <div class="container-fluid max-height no-overflow">
+    <div class="row">
+      <div class="col-sm-7 col-sm-offset-2 col-sm-pull-1" id="user-choice">
+        <h1 class="page-header">User Manager</h1>
 
-          
 
-          <h2 class="sub-header">&nbsp;</h2>
-<div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Data</th>
-                  <th>Value</th>
-                  
-                  
-                  
-                </tr>
-              </thead>
-              <tbody id="user-details"></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+
+        <h2 class="sub-header">Select or Search for a User to Begin</h2>
+        <div class="table-responsive">
+          <table class="table table-striped">
+        <tbody id="user-details"></tbody>
+      </table>
     </div>
+  </div>
+  <div class="col-sm-3">
+    <form action="#">
 
-
-
-
+      <div class="input-group" style="margin-top:30px;">
+        <span class="input-group-addon" id="flag-addon">Name: </span>
+        <input type="text" class="form-control" placeholder="Filter Users..." id="user-search" aria-describedby="flag-addon">
+      </div>
+    </form>
+    <!-- <h4>All users</h4> -->
+    <ul class="nav nav-sidebar scrollable"  id="users-con">
+    </ul>
+  </div>
+</div>
+</div>
 </body>
 </html>

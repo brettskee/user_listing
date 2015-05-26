@@ -18,7 +18,7 @@
 $(function() { // Don't load until page is loaded
 
 	// event handler for search input
-	$('#user-search').focus(function(e) {
+	$('input#user-search').focus(function(e) {
 		// So when we focus on the search field...
 		var search_field = e.target;
 
